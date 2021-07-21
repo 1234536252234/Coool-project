@@ -4,15 +4,15 @@ name=input("What is your name or your game name? ")
 print("\nWelcome to the game room,", name)
 print("\nHere are some options you can choose to play in the game room,")
 sleep(4)
-print("\nGuess the number, press 1")
+print("\nAddition Quiz, press 1")
 sleep(3)
-print("\nGuess which cup has the ball, press 2")
+print("\nChoose Your own adventure Game, press 2")
 sleep(3)
 print("\nor Rock, Paper, Scissors, press 3")
 sleep(3)
-print("\nAlso you can also play around with the Flash Math Calculator, press 4")
+print("\nGuess the Number, press 4")
 sleep(5)
-print("\nYou can also use the Word Counter tool to count how many words there are in your sentence, press 6")
+print("\nPictionary, press 6")
 sleep(3)
 print("\nHAVE FUN!")
 sleep(2)
@@ -20,8 +20,9 @@ while (True) :
     gameDecider=input("What game do you want to play?")
     gameDecider=int(gameDecider)
     if (gameDecider == 1) :
-        #print("This game is called, Guess which cup has the ball. 1, gameDecider:"+str(gameDecider))
-        function_option1();
+    
+   
+ 
     elif gameDecider == 2 :
        # print("This game is called, Guess which cup has the ball. 2, gameDecider:"+str(gameDecider))
        function_option2();
@@ -41,3 +42,161 @@ while (True) :
         break
 print("I hope you liked my Game Room")
 exit()
+
+
+
+
+
+#Random Guessing
+from random import randint
+player=input("Guess the correct number: ")
+computer=randint(1,50)
+if player==computer :
+    print("You guessed the correct number! ")
+else :
+    print("You have guessed the wrong number. ")
+    print("The correct number is",computer)
+    
+    
+#Adventure Choice Games
+import random
+
+with open('Names', 'r') as f:
+    Names = f.readlines()
+
+name = random.choice(Names) [:-1]
+print("Welcome to Choose Your own Quest,",name)
+print("On a stormy night, "+name+" saw a blue flash in the sky\nhe got out of bed and went to see what had happened\nwhen "+name+" opened the front door\n"+name+" saw a portal and he got sucked into the portal and when he landed he saw a whole new world that we could not imagine, and then he heard a voice")
+print("\nWelcome to Dark Quest, "+ name)
+print("The rules are to try to pick the correct choice and survive to get the gem that wil put you back into your own world. ")
+start=input("Do you want to start Yes/No "+ name +"? ")
+if (start == 'No' or start == 'n' or start == 'N' or start == 'no'):
+    print("Ok, You lose!")
+    exit()
+if (start == 'Yes' or start == 'Y' or start == 'y' or start == 'yes'):
+    door=input("There is a blue door and a red door which door do you want to enter? Red/Blue ")
+    if door == 'Red' or 'red':
+        monster = input("You encounter a slythertonic and a trollert which one do you want to face? S/T ")
+        if monster == 'S':
+            print("Sorry you died! :(")
+            exit()
+    if door == 'Blue' or 'blue':
+        pathway=input("There is a path that has Snakes and a pathway with Poison which way do you want to go?(Snake/Poison) ")
+        if (pathway == 'Poison' or 'poison'):
+            print('You survived barely but you can continue')
+            boat = input('You see a navy blue boat and a maroon red boat, which one do you want to use?(Navy Blue/Maroon Red) ')
+            if (boat == 'navy blue' or 'Navy blue' or 'navy Blue' or 'Navy Blue'):
+                print('You get paralized, you lose! ')
+                exit()
+            if (boat == 'Maroon Red' or 'Maroon red' or 'maroon Red' or 'maroon red'):
+                river = input('You come across a river called Herethon River and Windercroft stream which river do you want to cross?(Herethon/Windercroft) ')
+                if (river == 'Windercroft' or 'windercroft'):
+                    castle=input('You reach the end of the river and you see two castles, the first one has a skull on it, and the second one has a snake with a knife through it, which one do you want to enter? Skull/Snake')
+                    if (castle == 'Skull' or 'skull'):
+                        door=input('You see two doors 1 and 2, which one do you want to open? 1 or 2 ')
+                        if door == '1':
+                            print('You got ambushed by a group of mutant skulls, you lose! ')
+                            exit()
+                        if door == '2':
+                            chest=input('You see three chests, a Blue one, a Red one and a Brown one, which one do you want to open? Blue/Red/Brown' )
+                            if (door == 'Blue' or 'blue'):
+                                        print('Your soul got sucked into the box, you lose! ')
+                                        exit()
+                            if (door == 'Red' or 'red'):
+                                        print('YOU DIED! ')
+                            if (door == 'Brown' or 'brown'):
+                                        print('Congratulation, you survived the Dark Quest and found the gem, you can go back into your own world, I don''t know how many times you died but you are free now!' )
+                    if (castle == 'Snake' or 'snake'):
+                        print('You got killed by all the traps, you lose! ')
+                        exit()
+                if (river == 'Herethon' or 'herethon'):
+                    print("Oh no, you drowned, you lose! ")
+                    exit()
+        if (pathway == 'S' or 's'):
+            print("You are badly injured and therefore cannot continue, you failed the mission, you lose!")
+            exit()
+            
+            
+            
+            
+  #IXL GAEM ADDITION
+
+from random import randint
+print("Complete the challenge without getting anything wrong")
+for easy in range(5):
+    first_number= randint(1,20)
+    second_number=randint(1,20)
+    total=first_number+second_number
+    print(first_number,"+",second_number,"= ")
+    player= input("What's the answer? ")
+    player = int(player)
+    if player == total :
+        print("You got it correct!")
+    else :
+        print("You got it wrong.")
+        exit()
+for med in range(5):
+    first_number= randint(20,50)
+    second_number=randint(20,50)
+    total=first_number+second_number
+    print(first_number,"+",second_number,"= ")
+    player= input("What's the answer? ")
+    player = int(player)
+    if player == total :
+        print("You got it correct!")
+    else :
+        print("You got it wrong.")
+        exit()
+for hard in range(5):
+    first_number= randint(50,100)
+    second_number=randint(50,100)
+    total=first_number+second_number
+    print(first_number,"+",second_number,"= ")
+    player= input("What's the answer? ")
+    player = int(player)
+    if player == total :
+        print("You got it correct!")
+    else :
+        print("You got it wrong.")
+        exit()
+for  xhard in range(5):
+    first_number= randint(500,1000)
+    second_number=randint(500,1000)
+    total=first_number+second_number
+    print(first_number,"+",second_number,"= ")
+    player= input("What's the answer? ")
+    player = int(player)
+    if player == total :
+        print("You got it correct!")
+    else :
+        print("You got it wrong.")
+        exit()
+
+#ROCK PAPER SCISSORS GAME
+
+
+
+from random import randint
+user_hand=input("Choose Rock, Paper, or Scissor: ")
+if user_hand == "Rock":
+    user_number=1
+elif user_hand=="Paper":
+    user_number=2
+else:
+    user_number=3
+
+computer=randint(1,3)
+if user_number == computer :
+    print("You and the computer are tied!:(")
+elif computer==1 and user_number==2:
+    print("The computer wins!T-T")
+elif computer==3 and user_number==2:
+    print("The computer wins! T_T")
+elif computer==2 and user_number==1:
+    print("You beat the computer!")
+elif computer==1 and user_number==3:
+    print("The computer beat you!")
+elif computer==2 and user_number==3:
+    print("You beat the computer!")
+elif computer==3 and user_number==1:
+    print("You beat the Computer!")

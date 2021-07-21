@@ -1,0 +1,43 @@
+#START of the Main Program
+from time import sleep
+name=input("What is your name or your game name? ")
+print("\nWelcome to the game room,", name)
+print("\nHere are some options you can choose to play in the game room,")
+sleep(4)
+print("\nGuess the number, press 1")
+sleep(3)
+print("\nGuess which cup has the ball, press 2")
+sleep(3)
+print("\nor Rock, Paper, Scissors, press 3")
+sleep(3)
+print("\nAlso you can also play around with the Flash Math Calculator, press 4")
+sleep(5)
+print("\nYou can also use the Word Counter tool to count how many words there are in your sentence, press 6")
+sleep(3)
+print("\nHAVE FUN!")
+sleep(2)
+while (True) :
+    gameDecider=input("What game do you want to play?")
+    gameDecider=int(gameDecider)
+    if (gameDecider == 1) :
+        #print("This game is called, Guess which cup has the ball. 1, gameDecider:"+str(gameDecider))
+        function_option1();
+    elif gameDecider == 2 :
+       # print("This game is called, Guess which cup has the ball. 2, gameDecider:"+str(gameDecider))
+       function_option2();
+
+    elif gameDecider == 3:
+        #print("This game is called, Guess which cup has the ball. 3, gameDecider:"+str(gameDecider))
+        function_option3();
+
+    elif gameDecider == 4:
+        function_option4();
+
+    elif gameDecider == 6 :
+        user = input("Type your sentence here to see how many words there are: ")
+        print("There are " + str(len(user.split(" "))) + " words in your sentence!")
+
+
+        break
+print("I hope you liked my Game Room")
+exit()
